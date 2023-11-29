@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    h1 {
+      color: #28a745;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #343a40;
+      padding-top: 20px;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .sidebar a {
+      padding: 8px 8px 8px 16px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #28a745;
+    }
+
+    .content {
+      padding: 20px;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #28a745;
+      color: #ffffff;
+      border-radius: 12px 0 0 0;
+    }
+
+    .open-btn {
+      font-size: 30px;
+      cursor: pointer;
+      color: #28a745;
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+
+    .date-selector {
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .date-selector {
+        width: 100%;
+        text-align: center;
+        order: 2;
+        margin-top: 10px;
+      }
+    }
+  </style>
+  <title>Página de Ahorros y Créditos</title>
+</head>
+<body>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+    <a href="informacion.html">Información</a>
+    <a href="#">Cerrar Sesión</a>
+  </div>
+
+  <div class="content" id="content">
+    <div style="flex-grow: 2;">
+      <span class="open-btn" onclick="openNav()">&#9776;</span>
+      <h1>GRUPO DE AHORRO Y CRÉDITO</h1>
+      <h2>LOCAL - FONAFAM</h2>
+
+      <table class="table" style="border-radius: 12px;"> <!-- Agrega el estilo border-radius aquí -->
+        <tr>
+          <th>Jhonier Pasos &nbsp;&nbsp;&nbsp;&nbsp;<label for="monthSelector">Fecha: </label>
+            <input type="month" id="monthSelector" name="monthSelector">
+          </th>
+        </tr>
+        <tr>
+          <td>GRUPO <span id="randomNumber1"></span>A</span></td>
+        </tr>
+        <tr>
+          <td>Total de aportes: <span id="randomNumber2"></span>340.000</span></td>
+        </tr>
+        <tr>
+          <td>Aportes mes: <span id="randomNumber3"></span>60.000</span></td>
+        </tr>
+        <tr>
+          <td>Intereses por pagar: <span id="randomNumber4"></span>30.000</span></td>
+        </tr>
+        <tr>
+          <td>Total <span id="randomNumber5"></span>600.000</span></td>
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+ 
+
+</body>
+</html>
